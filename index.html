@@ -16,7 +16,7 @@
     <!-- Archivo de Estilos Personalizados -->
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="scroll-blocked">
 
     <!-- REPRODUCTOR DE MÚSICA FLOTANTE -->
     <div class="music-player-container playing" id="musicContainer">
@@ -27,7 +27,7 @@
             </span>
             <span class="music-text">Música</span>
         </button>
-        <!-- Enlace a la canción local con atributos autoplay y preload para streaming instantáneo -->
+        <!-- Enlace a la canción local con atributo autoplay -->
         <audio id="bgMusic" autoplay loop preload="auto">
             <source src="sound.mp3" type="audio/mpeg">
             Tu navegador no soporta el elemento de audio.
@@ -49,7 +49,7 @@
                 <span class="diamond">♦</span>
                 <span class="line"></span>
             </div>
-            <a href="#countdown-section" class="btn-primary scroll-to">Descubre los detalles</a>
+            <a href="#countdown-section" class="btn-primary scroll-to" id="discoverBtn">Descubre los detalles</a>
         </div>
     </header>
 

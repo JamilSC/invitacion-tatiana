@@ -61,6 +61,12 @@ body {
     position: relative;
 }
 
+body.scroll-blocked {
+    overflow: hidden !important;
+    height: 100vh !important;
+    width: 100vw !important;
+}
+
 /* Canvas de Partículas (Estrellas/Pétalos de Fondo) */
 #particlesCanvas {
     position: fixed;

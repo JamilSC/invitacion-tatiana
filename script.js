@@ -260,7 +260,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Eventos de interacción de pantalla sumamente veloces
-    const audioTriggers = ['touchstart', 'mousedown', 'pointerdown', 'scroll', 'keydown'];
+    const audioTriggers = ['touchstart', 'mousedown', 'pointerdown', 'keydown'];
 
     function removeAudioTriggers() {
         audioTriggers.forEach(event => {
@@ -269,16 +269,52 @@ document.addEventListener('DOMContentLoaded', () => {
         bgMusic.removeEventListener('canplay', startMutedAutoplay);
     }
 
-    // Registrar disparadores instantáneos
+    // Registrar disparadores instantáneos (sin 'once' para permitir reintentos si el buffer de red aún no está listo)
     audioTriggers.forEach(event => {
-        document.addEventListener(event, activateAudio, { once: true, passive: true });
+        document.addEventListener(event, activateAudio, { passive: true });
     });
+
+    // Control del botón de "Descubre los detalles" para desbloquear scroll y arrancar música
+    const discoverBtn = document.getElementById('discoverBtn');
+    if (discoverBtn) {
+        discoverBtn.addEventListener('click', (e) => {
+            e.preventDefault(); // Evitar comportamiento de enlace por defecto
+            
+            // 1. Desbloquear el scroll del cuerpo
+            document.body.classList.remove('scroll-blocked');
+            
+            // 2. Arrancar la música con volumen (desmutear)
+            bgMusic.muted = false;
+            bgMusic.play()
+                .then(() => {
+                    playIcon.classList.add('hidden');
+                    pauseIcon.classList.remove('hidden');
+                    musicContainer.classList.add('playing');
+                })
+                .catch(err => {
+                    console.log("El audio fue bloqueado al hacer clic en descubrir:", err);
+                });
+            
+            // 3. Desactivar otros triggers de audio global
+            removeAudioTriggers();
+            
+            // 4. Desplazamiento suave a la sección de la cuenta regresiva
+            const targetSection = document.getElementById('countdown-section');
+            if (targetSection) {
+                targetSection.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    }
 
     // Iniciar el buffer e intentar reproducir silenciado tan pronto como llegue el audio
     bgMusic.addEventListener('canplay', startMutedAutoplay);
     
     // Intento inicial inmediato por si el navegador es permisivo o el archivo ya está en caché
     startMutedAutoplay();
+
 
 
     // ==========================================================================
