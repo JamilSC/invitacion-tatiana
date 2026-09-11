@@ -377,8 +377,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const guestName = document.getElementById('guestName').value.trim();
         const attending = document.getElementById('attending').value;
-        const companions = document.getElementById('companions').value;
-        const dietary = document.getElementById('dietary').value.trim() || 'Ninguna';
         const phone = document.getElementById('whatsappPhone').value;
 
         // Formatear Mensaje Elegante
@@ -386,13 +384,10 @@ document.addEventListener('DOMContentLoaded', () => {
         message += `*Nombre:* ${guestName}\n`;
         
         if (attending === 'si') {
-            message += `*¿Asistirá?:* ¡Sí, confirmado! 🎉\n`;
-            let totalPersonas = 1 + parseInt(companions);
-            message += `*Acompañantes:* ${companions} (Total de pases: ${totalPersonas})\n`;
-            message += `*Restricciones Alimentarias:* ${dietary}\n\n`;
+            message += `*¿Asistirá?:* ¡Sí asisto! 🎉\n\n`;
             message += `_¡Estoy muy emocionado de acompañar a Tatiana Tairin en esta gran gala de sus Quince Años!_`;
         } else {
-            message += `*¿Asistirá?:* Lamentablemente no podré asistir. 😔\n\n`;
+            message += `*¿Asistirá?:* No asisto 😔\n\n`;
             message += `_Le deseo un día mágico y lleno de luz a Tatiana Tairin. ¡Muchas felicidades!_`;
         }
 
