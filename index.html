@@ -37,26 +37,42 @@
     <!-- CANVAS PARA EL EFECTO MÁGICO DE PARTÍCULAS -->
     <canvas id="particlesCanvas"></canvas>
 
-    <!-- 1. HERO HEADER MÁGICO -->
+    <!-- 1. HERO HEADER MÁGICO (SIN FRASE) -->
     <header class="hero-section">
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <span class="hero-subtitle-top">Mis XV Años</span>
             <h1 class="hero-title">Tatiana Tairin</h1>
-            <p class="hero-quote">"Agradezco a Dios por cada bendición que hay en mi vida. Es por eso que deseo compartas conmigo este día."</p>
             <div class="hero-divider">
                 <span class="line"></span>
                 <span class="diamond">♦</span>
                 <span class="line"></span>
             </div>
-            <a href="#countdown-section" class="btn-primary scroll-to" id="discoverBtn">Descubre los detalles</a>
+            <a href="#quote-photo-section" class="btn-primary scroll-to" id="discoverBtn">Descubre los detalles</a>
         </div>
     </header>
 
-    <!-- 2. CUENTA REGRESIVA (COUNTDOWN) -->
+    <!-- 2. FRASE EMOTIVA - FOTOGRAFÍA INMERSIVA A PANTALLA COMPLETA (FOTO 1) -->
+    <section id="quote-photo-section" class="immersive-quote-section">
+        <div class="immersive-quote-overlay"></div>
+        <div class="immersive-quote-content fade-in-scroll">
+            <span class="quote-icon-sparkle"><i class="fa-solid fa-sparkles"></i></span>
+            <blockquote class="immersive-quote-text">
+                "Agradezco a Dios por cada bendición que hay en mi vida. Es por eso que deseo compartas conmigo este día."
+            </blockquote>
+            <div class="quote-signature-divider">
+                <span class="line"></span>
+                <span class="diamond">♦</span>
+                <span class="line"></span>
+            </div>
+            <p class="quote-author-name">Tatiana Tairin</p>
+        </div>
+    </section>
+
+    <!-- 3. CUENTA REGRESIVA (COUNTDOWN) (CAPTURA 2) -->
     <section id="countdown-section" class="countdown-section">
         <div class="container">
-            <div class="countdown-glass-card">
+            <div class="countdown-glass-card fade-in-scroll">
                 <h2 class="section-subtitle-small">Faltan solo...</h2>
                 <div class="countdown-grid" id="countdown" data-date="November 28, 2026 16:30:00">
                     <div class="countdown-item">
@@ -84,7 +100,159 @@
         </div>
     </section>
 
-    <!-- 3. DETALLES CLAVE CON ÍCONOS -->
+    <!-- 4. FAMILIA Y PADRINOS (CAPTURA 2) -->
+    <section class="sponsors-section">
+        <div class="container">
+            <h2 class="section-title">Con la bendición de...</h2>
+            <div class="section-divider">
+                <span class="diamond-small">♦</span>
+            </div>
+            
+            <div class="family-container">
+                <!-- Sección de Padres -->
+                <div class="family-block fade-in-scroll">
+                    <h3 class="family-category-title">Mis Padres</h3>
+                    <div class="names-list">
+                        <p class="family-name">Jorge Eduardo Torres Saavedra</p>
+                        <p class="family-name">&amp;</p>
+                        <p class="family-name">Nelly Jocelyn Velazquez Perez</p>
+                    </div>
+                </div>
+
+                <div class="family-divider"></div>
+
+                <!-- Sección de Padrinos -->
+                <div class="family-block fade-in-scroll">
+                    <h3 class="family-category-title">Mis Padrinos de Honor</h3>
+                    <div class="names-list">
+                        <p class="family-name">Jose Manuel Delgadillo Rodriguez</p>
+                        <p class="family-name">&amp;</p>
+                        <p class="family-name">Alma Yadira Alvarez Soria</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. FOTOGRAFÍA 2 - BANNER INMERSIVO A PANTALLA COMPLETA (CORONA) -->
+    <section class="immersive-photo-banner photo-2-banner">
+        <div class="photo-banner-overlay"></div>
+        <div class="photo-banner-content fade-in-scroll">
+            <span class="banner-crown-icon"><i class="fa-solid fa-crown"></i></span>
+            <p class="banner-title-script">Mi momento de brillar</p>
+            <p class="banner-title-sub">TATIANA TAIRIN &bull; XV AÑOS</p>
+        </div>
+    </section>
+
+    <!-- 6. ITINERARIO DEL EVENTO (8 MOMENTOS - CAPTURAS 3 Y 4) -->
+    <section class="itinerary-section">
+        <div class="container">
+            <h2 class="section-title">Itinerario del Evento</h2>
+            <div class="section-divider">
+                <span class="diamond-small">♦</span>
+            </div>
+            <p class="section-subtitle-small">No te pierdas de ningún momento mágico</p>
+
+            <div class="timeline">
+                <!-- 1. Ceremonia Religiosa -->
+                <div class="timeline-item fade-in-scroll">
+                    <div class="timeline-icon">
+                        <i class="fa-solid fa-church"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="time">04:30 PM</span>
+                        <h4>Ceremonia Religiosa</h4>
+                        <p>Agradezco recibas conmigo la bendición de Dios por estos XV años .</p>
+                    </div>
+                </div>
+
+                <!-- 2. Recepción -->
+                <div class="timeline-item fade-in-scroll">
+                    <div class="timeline-icon">
+                        <i class="fa-solid fa-camera-retro"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="time">05:30 PM</span>
+                        <h4>Recepción</h4>
+                        <p>Siéntete cómodo y aprovechemos para fotografiar tu compañía</p>
+                    </div>
+                </div>
+
+                <!-- 3. Cena -->
+                <div class="timeline-item fade-in-scroll">
+                    <div class="timeline-icon">
+                        <i class="fa-solid fa-utensils"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="time">06:30 PM</span>
+                        <h4>Cena</h4>
+                        <p>Compartamos una deliciosa cena para celebrar</p>
+                    </div>
+                </div>
+
+                <!-- 4. Sorpresa -->
+                <div class="timeline-item fade-in-scroll">
+                    <div class="timeline-icon">
+                        <i class="fa-solid fa-gift"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="time">07:00 PM</span>
+                        <h4>Sorpresa</h4>
+                        <p>Un momento especial e inolvidable preparado con cariño.</p>
+                    </div>
+                </div>
+
+                <!-- 5. Vals -->
+                <div class="timeline-item fade-in-scroll">
+                    <div class="timeline-icon">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="time">08:30 PM</span>
+                        <h4>Vals</h4>
+                        <p>Disfruta del show</p>
+                    </div>
+                </div>
+
+                <!-- 6. Pastel -->
+                <div class="timeline-item fade-in-scroll">
+                    <div class="timeline-icon">
+                        <i class="fa-solid fa-cake-candles"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="time">10:00 PM</span>
+                        <h4>Pastel</h4>
+                        <p>Saborea y endulza este momento</p>
+                    </div>
+                </div>
+
+                <!-- 7. Apertura de la Pista -->
+                <div class="timeline-item fade-in-scroll">
+                    <div class="timeline-icon">
+                        <i class="fa-solid fa-music"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="time">10:30 PM</span>
+                        <h4>Apertura de la Pista</h4>
+                        <p>¡Es momento de bailar, divertirse y celebrar juntos!</p>
+                    </div>
+                </div>
+
+                <!-- 8. Fin de Evento -->
+                <div class="timeline-item fade-in-scroll">
+                    <div class="timeline-icon">
+                        <i class="fa-solid fa-moon"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h4>Fin de Evento</h4>
+                        <p>La celebración no termina . Baila todo lo que puedas y no dejes de divertirte.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. DETALLES DEL EVENTO & CÓDIGO DE VESTIMENTA (CAPTURA 5) -->
     <section class="details-section">
         <div class="container">
             <h2 class="section-title">Detalles del Evento</h2>
@@ -133,166 +301,36 @@
                     </a>
                 </div>
 
-                <!-- Tarjeta 4: Código de Vestimenta -->
-                <div class="detail-card fade-in-scroll">
-                    <div class="card-icon-container">
+            </div>
+
+            <!-- BLOQUE DE CÓDIGO DE VESTIMENTA SHOWCASE (TARJETA FORMAL + FOTO MUESTRA) -->
+            <div class="dresscode-showcase-container fade-in-scroll">
+                <div class="dresscode-info-card">
+                    <div class="dresscode-hanger-icon">
+                        <i class="fa-solid fa-vest-patches"></i>
+                    </div>
+                    <h3 class="dresscode-card-title">Código de Vestimenta</h3>
+                    <h4 class="dresscode-badge">FORMAL</h4>
+                    <div class="dresscode-couple-icon">
                         <i class="fa-solid fa-user-tie"></i>
+                        <i class="fa-solid fa-person-dress"></i>
                     </div>
-                    <h3>Código de Vestimenta</h3>
-                    <p class="card-main-text">Formal</p>
-                    <p class="card-sub-text">Agradecemos vestir de etiqueta formal para acompañarnos en esta gran gala.</p>
-                    <button class="card-btn" id="dressCodeBtn">
-                        <i class="fa-solid fa-circle-info"></i> Ver Detalles
-                    </button>
+                    <p class="dresscode-note-text">"Recuerda, lo más importante para nosotros es que estés cómodo. Pero nos gustaría que la vestimenta fuera formal."</p>
                 </div>
-
+                <div class="dresscode-photo-card">
+                    <div class="photo-frame-dress">
+                        <img src="Imagenes/imagen3.jpeg" alt="Detalle del Vestido - Tatiana Tairin" class="dress-showcase-img">
+                        <div class="dress-badge-tag">
+                            <span>Color reservado</span>
+                        </div>
+                    </div>
+                </div>
             </div>
+
         </div>
     </section>
 
-    <!-- MODAL PARA DRESS CODE (INSPIRACIÓN DE VESTIMENTA) -->
-    <div id="dressCodeModal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn" id="closeModal">&times;</span>
-            <h3 class="modal-title">Código de Vestimenta</h3>
-            <div class="section-divider"><span class="diamond-small">♦</span></div>
-            <p class="modal-main-desc">Para lucir espectaculares en esta gran velada, agradecemos seguir las recomendaciones del código de vestimenta:</p>
-            
-            <div class="dress-code-types">
-                <div class="dress-type">
-                    <i class="fa-solid fa-person-dress-burst"></i>
-                    <h4>Damas</h4>
-                    <p>Vestido formal de noche. Por favor evita vestir color menta usando tonalidades complementarias de tu preferencia.</p>
-                </div>
-                <div class="dress-type">
-                    <i class="fa-solid fa-user-tie"></i>
-                    <h4>Caballeros</h4>
-                    <p>Traje formal completo, saco, camisa formal y corbata.</p>
-                </div>
-            </div>
-            <p class="modal-footer-note">¡Gracias por vestir de gala en mi día especial!</p>
-        </div>
-    </div>
-
-    <!-- NUEVA SECCIÓN: ITINERARIO / LÍNEA DE TIEMPO -->
-    <section class="itinerary-section">
-        <div class="container">
-            <h2 class="section-title">Itinerario del Evento</h2>
-            <div class="section-divider">
-                <span class="diamond-small">♦</span>
-            </div>
-            <p class="section-subtitle-small">No te pierdas de ningún momento mágico</p>
-
-            <div class="timeline">
-                <!-- Item 1: Ceremonia -->
-                <div class="timeline-item fade-in-scroll">
-                    <div class="timeline-icon">
-                        <i class="fa-solid fa-church"></i>
-                    </div>
-                    <div class="timeline-content">
-                        <span class="time">04:30 PM</span>
-                        <h4>Ceremonia Religiosa</h4>
-                        <p>Daremos gracias a Dios en la Parroquia Santiago Apóstol.</p>
-                    </div>
-                </div>
-
-                <!-- Item 2: Recepción -->
-                <div class="timeline-item fade-in-scroll">
-                    <div class="timeline-icon">
-                        <i class="fa-solid fa-door-open"></i>
-                    </div>
-                    <div class="timeline-content">
-                        <span class="time">05:30 PM</span>
-                        <h4>Recepción</h4>
-                        <p>Bienvenida de los invitados en el Auditorio Tepalcapa.</p>
-                    </div>
-                </div>
-
-                <!-- Item 3: Banquete -->
-                <div class="timeline-item fade-in-scroll">
-                    <div class="timeline-icon">
-                        <i class="fa-solid fa-utensils"></i>
-                    </div>
-                    <div class="timeline-content">
-                        <span class="time">06:30 PM</span>
-                        <h4>Banquete</h4>
-                        <p>Compartiremos una deliciosa cena de gala para celebrar.</p>
-                    </div>
-                </div>
-
-                <!-- Item 4: Vals -->
-                <div class="timeline-item fade-in-scroll">
-                    <div class="timeline-icon">
-                        <i class="fa-solid fa-wand-magic-sparkles"></i>
-                    </div>
-                    <div class="timeline-content">
-                        <span class="time">08:30 PM</span>
-                        <h4>Gran Vals Familiar</h4>
-                        <p>El tradicional momento emotivo de baile con mis padres y padrinos.</p>
-                    </div>
-                </div>
-
-                <!-- Item 5: Baile -->
-                <div class="timeline-item fade-in-scroll">
-                    <div class="timeline-icon">
-                        <i class="fa-solid fa-music"></i>
-                    </div>
-                    <div class="timeline-content">
-                        <span class="time">10:30 PM</span>
-                        <h4>Apertura de la Pista</h4>
-                        <p>¡Es momento de bailar, divertirse y celebrar juntos!</p>
-                    </div>
-                </div>
-
-                <!-- Item 6: Fin -->
-                <div class="timeline-item fade-in-scroll">
-                    <div class="timeline-icon">
-                        <i class="fa-solid fa-moon"></i>
-                    </div>
-                    <div class="timeline-content">
-                        <h4>Fin del Evento</h4>
-                        <p>Agradecemos tu compañía en este día inolvidable.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 4. FAMILIA Y PADRINOS -->
-    <section class="sponsors-section">
-        <div class="container">
-            <h2 class="section-title">Con la bendición de...</h2>
-            <div class="section-divider">
-                <span class="diamond-small">♦</span>
-            </div>
-            
-            <div class="family-container">
-                <!-- Sección de Padres -->
-                <div class="family-block fade-in-scroll">
-                    <h3 class="family-category-title">Mis Padres</h3>
-                    <div class="names-list">
-                        <p class="family-name">Jorge Eduardo Torres Saavedra</p>
-                        <p class="family-name">&amp;</p>
-                        <p class="family-name">Nelly Jocelyn Velazquez Perez</p>
-                    </div>
-                </div>
-
-                <div class="family-divider"></div>
-
-                <!-- Sección de Padrinos -->
-                <div class="family-block fade-in-scroll">
-                    <h3 class="family-category-title">Mis Padrinos de Honor</h3>
-                    <div class="names-list">
-                        <p class="family-name">Jose Manuel Delgadillo Rodriguez</p>
-                        <p class="family-name">&amp;</p>
-                        <p class="family-name">Alma Yadira Alvarez Soria</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 5. CONFIRMACIÓN DE ASISTENCIA (RSVP) "GLITTER" -->
+    <!-- 8. CONFIRMACIÓN DE ASISTENCIA (RSVP) "GLITTER" -->
     <section class="rsvp-section">
         <div class="container">
             <div class="rsvp-glass-container">
@@ -335,7 +373,7 @@
         </div>
     </section>
 
-    <!-- 6. PLAYLIST DE LA QUINCEAÑERA -->
+    <!-- 9. PLAYLIST DE LA QUINCEAÑERA -->
     <section class="playlist-section">
         <div class="container">
             <h2 class="section-title">Mi Canción Favorita</h2>
@@ -344,6 +382,14 @@
             </div>
             <p class="playlist-desc">"Love, Maybe" de MeloMance es el tema que guiará este cuento mágico. ¡Escúchalo aquí!</p>
             
+            <!-- FOTOGRAFÍA 4 - BANNER EDITORIAL CON HALO ÁUREO (FOTO 4) -->
+            <div class="playlist-editorial-container fade-in-scroll">
+                <div class="editorial-halo"></div>
+                <div class="playlist-photo-wrapper">
+                    <img src="Imagenes/imagen4.jpeg" alt="Tatiana Tairin - Mi Canción Favorita" class="playlist-immersive-img">
+                </div>
+            </div>
+
             <div class="playlist-card-wrapper fade-in-scroll">
                 <div class="playlist-mockup-card">
                     <div class="playlist-header">
@@ -372,7 +418,7 @@
         </div>
     </section>
 
-    <!-- PIE DE PÁGINA (FOOTER) -->
+    <!-- 10. PIE DE PÁGINA (FOOTER) -->
     <footer class="main-footer">
         <div class="container">
             <p class="footer-pinyon">Tatiana Tairin</p>

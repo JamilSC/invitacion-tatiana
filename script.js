@@ -297,9 +297,8 @@ document.addEventListener('DOMContentLoaded', () => {
             
             // 3. Desactivar otros triggers de audio global
             removeAudioTriggers();
-            
-            // 4. Desplazamiento suave a la sección de la cuenta regresiva
-            const targetSection = document.getElementById('countdown-section');
+            // 4. Desplazamiento suave a la sección de la frase y primera fotografía
+            const targetSection = document.getElementById('quote-photo-section') || document.getElementById('countdown-section');
             if (targetSection) {
                 targetSection.scrollIntoView({
                     behavior: 'smooth',
@@ -318,29 +317,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // ==========================================================================
-    // 4. MODAL DE CÓDIGO DE VESTIMENTA (DRESS CODE)
+    // 4. MODAL DE CÓDIGO DE VESTIMENTA (DRESS CODE) - COMPROBACIÓN SEGURA
     // ==========================================================================
     const dressCodeBtn = document.getElementById('dressCodeBtn');
     const dressCodeModal = document.getElementById('dressCodeModal');
     const closeModal = document.getElementById('closeModal');
 
-    dressCodeBtn.addEventListener('click', () => {
-        dressCodeModal.classList.add('show');
-        document.body.style.overflow = 'hidden';
-    });
+    if (dressCodeBtn && dressCodeModal) {
+        dressCodeBtn.addEventListener('click', () => {
+            dressCodeModal.classList.add('show');
+            document.body.style.overflow = 'hidden';
+        });
 
-    function hideModal() {
-        dressCodeModal.classList.remove('show');
-        document.body.style.overflow = '';
-    }
-
-    closeModal.addEventListener('click', hideModal);
-    
-    window.addEventListener('click', (e) => {
-        if (e.target === dressCodeModal) {
-            hideModal();
+        function hideModal() {
+            dressCodeModal.classList.remove('show');
+            document.body.style.overflow = '';
         }
-    });
+
+        if (closeModal) {
+            closeModal.addEventListener('click', hideModal);
+        }
+        
+        window.addEventListener('click', (e) => {
+            if (e.target === dressCodeModal) {
+                hideModal();
+            }
+        });
+    }
 
 
     // ==========================================================================

@@ -273,7 +273,319 @@ h1, h2, h3, h4 {
 }
 
 /* --------------------------------------------------------------------------
-   2. Cuenta Regresiva (Countdown)
+   2. Frase Emotiva con Fotografía Inmersiva (Foto 1 - Full Bleed 100vw)
+   -------------------------------------------------------------------------- */
+.immersive-quote-section {
+    position: relative;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    min-height: 105vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* Mueve el texto hacia la parte inferior del vestido sin tapar su rostro */
+    background: url('Imagenes/imagen1.jpeg') no-repeat center 20%;
+    background-size: cover;
+    background-attachment: scroll;
+    overflow: hidden;
+}
+
+.immersive-quote-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Degradado sutil arriba para lucir el rostro de Tatiana, y oscuro abajo para máxima legibilidad del texto */
+    background: linear-gradient(
+        to bottom,
+        rgba(44, 62, 59, 0.1) 0%,
+        rgba(44, 62, 59, 0.15) 35%,
+        rgba(44, 62, 59, 0.65) 60%,
+        rgba(44, 62, 59, 0.85) 85%,
+        rgba(249, 243, 247, 1) 100%
+    );
+    z-index: 1;
+}
+
+.immersive-quote-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 40px 20px 70px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.quote-icon-sparkle {
+    color: var(--gold);
+    font-size: 1.8rem;
+    display: inline-block;
+    margin-bottom: 15px;
+    filter: drop-shadow(0 2px 10px rgba(197, 160, 89, 0.8));
+    animation: sparkleGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes sparkleGlow {
+    0% { transform: scale(1); opacity: 0.8; }
+    100% { transform: scale(1.15); opacity: 1; }
+}
+
+.immersive-quote-text {
+    font-family: var(--font-serif);
+    font-size: clamp(1.4rem, 4vw, 2.3rem);
+    font-style: italic;
+    color: #FFFFFF;
+    line-height: 1.65;
+    letter-spacing: 0.03em;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.95), 0 2px 6px rgba(0, 0, 0, 0.9);
+    margin: 0 auto 25px auto;
+}
+
+.quote-signature-divider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 15px auto;
+}
+
+.quote-signature-divider .line {
+    width: 60px;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.quote-signature-divider .diamond {
+    color: var(--gold);
+    margin: 0 12px;
+    font-size: 0.9rem;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+.quote-author-name {
+    font-family: var(--font-handwritten);
+    font-size: clamp(3.2rem, 7vw, 4.8rem);
+    color: var(--rose-gold-light);
+    text-shadow: 0 4px 18px rgba(0, 0, 0, 0.9);
+    font-weight: normal;
+}
+
+/* --------------------------------------------------------------------------
+   5. Fotografía 2 - Banner Inmersivo de Corona (Full Bleed 100vw)
+   -------------------------------------------------------------------------- */
+.immersive-photo-banner {
+    position: relative;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background-size: cover;
+    background-position: center 30%;
+    overflow: hidden;
+}
+
+.photo-2-banner {
+    background-image: url('Imagenes/imagen2.jpeg');
+}
+
+.photo-banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Desvanecimiento gradual suave en los bordes para fundirse con el fondo */
+    background: linear-gradient(
+        to bottom,
+        rgba(249, 243, 247, 1) 0%,
+        rgba(249, 243, 247, 0) 18%,
+        rgba(0, 0, 0, 0) 55%,
+        rgba(44, 62, 59, 0.65) 85%,
+        rgba(249, 243, 247, 1) 100%
+    );
+    z-index: 1;
+}
+
+.photo-banner-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 30px 20px 60px 20px;
+    width: 100%;
+}
+
+.banner-crown-icon {
+    color: var(--gold);
+    font-size: 2.2rem;
+    display: inline-block;
+    margin-bottom: 8px;
+    filter: drop-shadow(0 3px 10px rgba(0, 0, 0, 0.8));
+}
+
+.banner-title-script {
+    font-family: var(--font-handwritten);
+    font-size: clamp(3rem, 6.5vw, 4.5rem);
+    color: #FFFFFF;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.9);
+    margin-bottom: 5px;
+    font-weight: normal;
+}
+
+.banner-title-sub {
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    letter-spacing: 0.35em;
+    color: var(--rose-gold-light);
+    text-transform: uppercase;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
+    font-weight: 500;
+}
+
+/* --------------------------------------------------------------------------
+   Código de Vestimenta Showcase (Tarjeta + Foto Muestra de Gala)
+   -------------------------------------------------------------------------- */
+.dresscode-showcase-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    max-width: 900px;
+    margin: 50px auto 0 auto;
+    align-items: stretch;
+}
+
+@media (min-width: 768px) {
+    .dresscode-showcase-container {
+        grid-template-columns: 1.1fr 0.9fr;
+    }
+}
+
+.dresscode-info-card {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--gold-light);
+    border-radius: 24px;
+    padding: 40px 30px;
+    text-align: center;
+    box-shadow: var(--shadow-soft);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.dresscode-hanger-icon i {
+    font-size: 2.2rem;
+    color: var(--rose-gold-dark);
+    margin-bottom: 10px;
+}
+
+.dresscode-card-title {
+    font-family: var(--font-handwritten);
+    font-size: clamp(2.4rem, 5vw, 3.2rem);
+    color: var(--rose-gold-dark);
+    margin-bottom: 5px;
+    font-weight: normal;
+}
+
+.dresscode-badge {
+    font-family: var(--font-serif-display);
+    font-size: 1.3rem;
+    color: var(--rose-gold-dark);
+    letter-spacing: 0.25em;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    position: relative;
+    padding: 4px 18px;
+    border-top: 1px solid var(--gold-light);
+    border-bottom: 1px solid var(--gold-light);
+}
+
+.dresscode-couple-icon {
+    display: flex;
+    gap: 15px;
+    font-size: 1.6rem;
+    color: var(--rose-gold-dark);
+    margin-bottom: 20px;
+}
+
+.dresscode-note-text {
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
+    color: var(--text-dark);
+    line-height: 1.6;
+    max-width: 380px;
+    font-style: italic;
+    margin: 0 auto;
+}
+
+.dresscode-photo-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.photo-frame-dress {
+    width: 100%;
+    max-width: 360px;
+    background: var(--bg-white);
+    padding: 10px;
+    border-radius: 22px;
+    border: 1px solid var(--gold-light);
+    box-shadow: var(--shadow-soft);
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition-smooth);
+}
+
+.photo-frame-dress:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-medium);
+    border-color: var(--rose-gold);
+}
+
+.dress-showcase-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 16px;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.photo-frame-dress:hover .dress-showcase-img {
+    transform: scale(1.03);
+}
+
+.dress-badge-tag {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(84, 110, 106, 0.88);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 6px 18px;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    white-space: nowrap;
+}
+
+.dress-badge-tag span {
+    font-family: var(--font-sans);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: #FFFFFF;
+    font-weight: 500;
+}
+
+/* --------------------------------------------------------------------------
+   3. Cuenta Regresiva (Countdown)
    -------------------------------------------------------------------------- */
 .countdown-section {
     padding: 40px 0;
@@ -1007,8 +1319,71 @@ h1, h2, h3, h4 {
     text-align: center;
     color: var(--text-muted);
     max-width: 700px;
-    margin: -20px auto 40px auto;
+    margin: -20px auto 30px auto;
 }
+
+.playlist-editorial-container {
+    position: relative;
+    max-width: 540px;
+    margin: 15px auto 40px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.editorial-halo {
+    position: absolute;
+    width: 85%;
+    height: 85%;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(154, 228, 207, 0.4) 0%, rgba(229, 213, 184, 0.3) 45%, rgba(249, 243, 247, 0) 70%);
+    filter: blur(28px);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.playlist-photo-wrapper {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Fusión Orgánica con Desvanecimiento Profundo y Halo Áureo */
+.playlist-immersive-img {
+    width: 100%;
+    max-height: 520px;
+    object-fit: cover;
+    display: block;
+    /* Máscara radial difuminada profunda para fusionar con el halo y fondo */
+    -webkit-mask-image: radial-gradient(ellipse 82% 80% at 50% 50%, rgba(0, 0, 0, 1) 35%, rgba(0, 0, 0, 0) 95%);
+    mask-image: radial-gradient(ellipse 82% 80% at 50% 50%, rgba(0, 0, 0, 1) 35%, rgba(0, 0, 0, 0) 95%);
+    filter: contrast(1.04) brightness(0.99) saturate(1.05);
+    transition: var(--transition-smooth);
+}
+
+.playlist-immersive-img:hover {
+    transform: scale(1.02);
+    filter: contrast(1.06) brightness(1.02) saturate(1.1);
+}
+
+/* ==========================================================================
+   [FUTURA OPCIÓN 1 PARA EL CLIENTE - REPRODUCTOR UNIFICADO CON COVER DE FOTO]
+   Para activar esta opción en el futuro:
+   .playlist-mockup-card-fusion {
+       background: url('Imagenes/imagen4.jpeg') no-repeat center center;
+       background-size: cover;
+       position: relative;
+       overflow: hidden;
+       border-radius: 28px;
+       min-height: 480px;
+   }
+   .playlist-mockup-card-fusion .overlay {
+       background: linear-gradient(to bottom, rgba(44,62,59,0.2) 0%, rgba(44,62,59,0.85) 100%);
+   }
+   ========================================================================== */
 
 .playlist-card-wrapper {
     display: flex;
