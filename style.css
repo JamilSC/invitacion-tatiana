@@ -283,7 +283,7 @@ h1, h2, h3, h4 {
     display: flex;
     justify-content: center;
     align-items: flex-end; /* Mantiene el texto en la parte inferior sobre el fondo con buen contraste */
-    background: url('Imagenes/imagen1.jpeg') no-repeat center center;
+    background: url('Imagenes/imagen1-mobile.jpeg') no-repeat center center;
     background-size: cover;
     background-attachment: scroll;
     overflow: hidden;
@@ -386,7 +386,22 @@ h1, h2, h3, h4 {
 }
 
 .photo-2-banner {
-    background-image: url('Imagenes/imagen2.jpeg');
+    background-image: url('Imagenes/imagen2-mobile.jpeg');
+}
+
+/* Versión de alta costura para Pantallas Grandes / PC (Escritorio) */
+@media (min-width: 768px) {
+    .immersive-quote-section {
+        background-image: url('Imagenes/imagen1-desktop.jpeg');
+        background-position: center 40%;
+        min-height: 90vh;
+    }
+    
+    .photo-2-banner {
+        background-image: url('Imagenes/imagen2-desktop.jpeg');
+        background-position: center 25%;
+        min-height: 85vh;
+    }
 }
 
 .photo-banner-overlay {
