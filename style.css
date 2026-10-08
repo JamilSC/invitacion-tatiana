@@ -279,11 +279,11 @@ h1, h2, h3, h4 {
     position: relative;
     width: 100vw;
     margin-left: calc(-50vw + 50%);
-    min-height: 105vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: flex-end; /* Mueve el texto hacia la parte inferior del vestido sin tapar su rostro */
-    background: url('Imagenes/imagen1.jpeg') no-repeat center 20%;
+    align-items: flex-end; /* Mantiene el texto en la parte inferior sobre el fondo con buen contraste */
+    background: url('Imagenes/imagen1.jpeg') no-repeat center center;
     background-size: cover;
     background-attachment: scroll;
     overflow: hidden;
@@ -381,7 +381,7 @@ h1, h2, h3, h4 {
     justify-content: center;
     align-items: flex-end;
     background-size: cover;
-    background-position: center 30%;
+    background-position: center center;
     overflow: hidden;
 }
 
