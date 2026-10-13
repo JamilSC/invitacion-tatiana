@@ -75,6 +75,7 @@
         <div class="container">
             <div class="countdown-glass-card fade-in-scroll">
                 <h2 class="section-subtitle-small">Faltan solo...</h2>
+                <div class="section-divider countdown-diamond-divider"><span class="diamond-small">♦</span></div>
                 <div class="countdown-grid" id="countdown" data-date="November 28, 2026 16:30:00">
                     <div class="countdown-item">
                         <span class="number" id="days">00</span>
@@ -323,50 +324,7 @@
         </div>
     </section>
 
-    <!-- 8. CONFIRMACIÓN DE ASISTENCIA (RSVP) "GLITTER" -->
-    <section class="rsvp-section">
-        <div class="container">
-            <div class="rsvp-glass-container">
-                <h2 class="section-title text-light">Confirmar Asistencia</h2>
-                <p class="rsvp-subtitle">Por favor confirma antes del 31 de Octubre de 2026 para esperarte con alegría.</p>
-                <div class="section-divider"><span class="diamond-small">♦</span></div>
-                
-                <form id="rsvpForm" class="rsvp-form">
-                    <div class="form-group-row">
-                        <div class="form-group">
-                            <label for="guestName">Nombre Completo</label>
-                            <input type="text" id="guestName" name="guestName" placeholder="Escribe tu nombre..." required>
-                        </div>
-                        <div class="form-group">
-                            <label for="attending">¿Asistirás?</label>
-                            <div class="select-wrapper">
-                                <select id="attending" name="attending" required>
-                                    <option value="" disabled selected>Selecciona una opción</option>
-                                    <option value="si">Sí asisto</option>
-                                    <option value="no">No asisto</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Configuración para enviar a WhatsApp del organizador/papá (Ejemplo configurado con 5215500000000) -->
-                    <input type="hidden" id="whatsappPhone" value="5215500000000">
-
-                    <button type="submit" class="btn-rsvp-glitter" id="submitBtn">
-                        <span class="btn-text">Confirmar por WhatsApp</span>
-                        <span class="glitter-shine"></span>
-                    </button>
-                </form>
-                
-                <div id="rsvpSuccessMessage" class="rsvp-success hidden">
-                    <i class="fa-solid fa-circle-check"></i>
-                    <p>¡Muchas gracias por confirmar! Te estamos redirigiendo a WhatsApp para procesar tu confirmación.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 9. PLAYLIST DE LA QUINCEAÑERA -->
+    <!-- 8. PLAYLIST DE LA QUINCEAÑERA -->
     <section class="playlist-section">
         <div class="container">
             <h2 class="section-title">Mi Canción Favorita</h2>
@@ -406,6 +364,49 @@
                     <a href="https://open.spotify.com/track/2X45nVBeYzmDlrXji9Av0Q?si=Kt9IDa36RLG8DuIB1QNVTA&utm_source=whatsapp&sci=spotify%3Acard-config%3A4004gyPKoBzttKaF2vhhAp" target="_blank" class="btn-spotify">
                         <i class="fa-brands fa-spotify"></i> Escuchar en Spotify
                     </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. CONFIRMACIÓN DE ASISTENCIA (RSVP) "GLITTER" -->
+    <section class="rsvp-section">
+        <div class="container">
+            <div class="rsvp-glass-container">
+                <h2 class="section-title text-light">Confirmar Asistencia</h2>
+                <p class="rsvp-subtitle">Por favor confirma antes del 31 de Octubre de 2026 para esperarte con alegría.</p>
+                <div class="section-divider"><span class="diamond-small">♦</span></div>
+                
+                <form id="rsvpForm" class="rsvp-form">
+                    <div class="form-group-row">
+                        <div class="form-group">
+                            <label for="guestName">Nombre Completo</label>
+                            <input type="text" id="guestName" name="guestName" placeholder="Escribe tu nombre..." required>
+                        </div>
+                        <div class="form-group">
+                            <label for="attending">¿Asistirás?</label>
+                            <div class="select-wrapper">
+                                <select id="attending" name="attending" required>
+                                    <option value="" disabled selected>Selecciona una opción</option>
+                                    <option value="si">Sí asisto</option>
+                                    <option value="no">No asisto</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Configuración para enviar a WhatsApp del organizador/papá (Ejemplo configurado con 5215500000000) -->
+                    <input type="hidden" id="whatsappPhone" value="5215500000000">
+
+                    <button type="submit" class="btn-rsvp-glitter" id="submitBtn">
+                        <span class="btn-text">Confirmar por WhatsApp</span>
+                        <span class="glitter-shine"></span>
+                    </button>
+                </form>
+                
+                <div id="rsvpSuccessMessage" class="rsvp-success hidden">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <p>¡Muchas gracias por confirmar! Te estamos redirigiendo a WhatsApp para procesar tu confirmación.</p>
                 </div>
             </div>
         </div>
